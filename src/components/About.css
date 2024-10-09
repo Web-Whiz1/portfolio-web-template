@@ -1,0 +1,72 @@
+.about {
+    padding: 100px 0; /* Top and bottom padding */
+    padding: 100px 0; /* Top and bottom padding */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    position: relative; /* Position for overlay */
+    z-index: 1; /* Ensure content is above the background */
+}
+.about:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better readability */
+    z-index: -1; /* Place behind content */
+}
+.about-heading {
+    font-size: 3rem; /* Heading size */
+    margin-bottom: 20px; /* Space below the heading */
+    background: linear-gradient(90deg, #B8860B, #FFD700); /* Gold gradient */
+    background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.about-description {
+    font-size: 1.5rem; /* Description text size */
+    margin: 20px 0; /* Space around the description */
+    line-height: 1.6; /* Improved line spacing */
+}
+
+.about-content {
+    margin-top: 30px; /* Space above skills section */
+}
+
+.skills-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    display: inline-block; /* Inline-block for better alignment */
+}
+
+.skills-list li {
+    font-size: 1.2rem; /* Skill item size */
+    margin: 10px 0; /* Space between skills */
+    padding: 5px; /* Padding for click area */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.skills-list li:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    cursor: pointer; /* Pointer cursor for interaction */
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: 2.5rem; /* Smaller heading size for mobile */
+    }
+
+    .about-description {
+        font-size: 1.2rem; /* Smaller description size for mobile */
+    }
+
+    .skills-list li {
+        font-size: 1rem; /* Smaller skill size for mobile */
+    }
+}

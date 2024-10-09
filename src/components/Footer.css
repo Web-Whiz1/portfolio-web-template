@@ -1,0 +1,56 @@
+/* Footer Styles */
+.footer {
+    padding: 20px 0; /* Top and bottom padding */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    color: rgb(255, 255, 255); /* Text color */
+    text-align: center; /* Center-align text */
+    position: relative; /* Positioning for overlay */
+    z-index: 10; /* Ensure footer is above other elements */
+}
+.footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better readability */
+    z-index: -1; /* Place behind content */
+}
+
+/* Footer Text */
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Font size */
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px; /* Space above social icons */
+    display: flex; /* Flex display for icons */
+    justify-content: center; /* Center icons */
+    gap: 15px; /* Space between icons */
+    z-index: 1; /* Ensure icons are above the overlay */
+}
+
+.social-icon {
+    color: #B8860B; /* Gold color for icons */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-icon:hover {
+    color: #FFD700; /* Lighter gold on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer p {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .social-icon {
+        font-size: 1.2rem; /* Smaller icon size on mobile */
+    }
+}

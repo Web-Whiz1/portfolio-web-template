@@ -1,0 +1,79 @@
+/* Hero Section Specific */
+.hero {
+    height: calc(100vh - 70px); /* Adjust for navbar height */
+    padding: 100px 0; /* Top and bottom padding */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    position: relative; /* Positioning for overlay */
+    z-index: 1; /* Ensure content is above the background */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+}
+
+/* Dark Overlay */
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better readability */
+    z-index: -1; /* Place behind content */
+}
+
+/* Adjust title and description for the navbar */
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    z-index: 1; /* Ensure it's above the overlay */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 5px 0; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensure it's above the overlay */
+}
+
+/* Button Styling */
+.hero-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #B8860B, #FFD700);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    z-index: 1; /* Ensure it's above the overlay */
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        height: calc(100vh - 50px); /* Adjust for smaller navbar height on mobile */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+
+    .hero-button {
+        font-size: 1rem; /* Smaller button font for mobile */
+        padding: 8px 16px; /* Adjust padding for mobile */
+    }
+}

@@ -1,0 +1,110 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 15px 50px; /* Adequate padding for aesthetics */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar stays on top */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+/* Logo Styles */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #87CEEB; /* Gold color for the logo */
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+/* Nav Links Styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between links */
+}
+
+/* Each Link Styles */
+.nav-links li {
+    position: relative; /* For the underline effect */
+}
+
+.nav-links a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+/* Hover Effect for Links */
+.nav-links a:hover {
+    color: #B8860B; /* Dark Gold on hover */
+}
+
+/* Underline Effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #B8860B; /* Dark Gold for underline */
+    left: 50%;
+    bottom: -5px; /* Positioning below the text */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Hover Underline Animation */
+.nav-links a:hover::after {
+    width: 100%; /* Full width underline on hover */
+    left: 0; /* Align underline to the left */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Reduced padding on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Overlay position */
+        background-color: rgba(0, 0, 0, 0.9); /* Darker background for the menu */
+        top: 60px; /* Position below navbar */
+        left: 0;
+        right: 0;
+        padding: 20px 0; /* Padding for the dropdown */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on mobile */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Smaller logo for mobile */
+    }
+}

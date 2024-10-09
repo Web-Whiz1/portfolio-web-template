@@ -1,0 +1,62 @@
+/* Contact Section */
+.contact {
+    padding: 100px 0; /* Top and bottom padding */
+    padding: 100px 0; /* Top and bottom padding */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    position: relative; /* Position for overlay */
+    z-index: 1; /* Ensure content is above the background */
+}
+/* Dark Overlay */
+.contact:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better readability */
+    z-index: -1; /* Place behind content */
+}
+
+/* Heading Styles */
+.contact h2 {
+    font-size: 3rem; /* Increase font size for prominence */
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+}
+
+/* Paragraph Styles */
+.contact p {
+    font-size: 1.2rem; /* Standard font size */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* Link Styles */
+.contact a {
+    color: #B8860B; /* Gold color for links */
+    text-decoration: underline; /* Underline for emphasis */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.contact a:hover {
+    color: #FFD700; /* Lighter gold on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 50px 0; /* Reduced padding for mobile */
+    }
+
+    .contact h2 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .contact p {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+}

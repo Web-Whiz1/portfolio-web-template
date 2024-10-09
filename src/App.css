@@ -1,0 +1,96 @@
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+  font-family: 'Your Font', sans-serif; /* Define your base font */
+  background-image: url('./bg.jpg'); /* Background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
+  color: white; /* Text color */
+  text-align: center; /* Center-align text */
+}
+
+/* Sections styles */
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 20px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #B8860B; /* Gold color on hover */
+}
+
+/* Footer styles */
+.footer {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer-content {
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  color: #B8860B;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #FFD700; /* Lighter gold on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none; /* Hidden on mobile */
+  }
+
+  .nav-links.show {
+    display: flex; /* Show when menu is toggled */
+  }
+
+  section {
+    padding: 50px 0; /* Adjust padding for mobile */
+  }
+}
