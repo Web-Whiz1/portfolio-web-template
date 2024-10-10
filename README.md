@@ -1,6 +1,6 @@
 WebWhiz Portfolio Template
 
-Description:
+## Description:
 WebWhiz is a modern and clean React portfolio template designed for developers to showcase their projects, skills, and experiences effectively. This template offers a responsive layout, smooth animations, and a visually appealing design, making it ideal for creating a professional online presence.
 
 Table of Contents:
@@ -22,7 +22,7 @@ Installation:
    npm start
 
 Usage:
-This template provides a fully responsive layout to highlight your projects and skills. Customize the content in the respective sections to personalize your portfolio. The template includes sections for "About Me," "My Projects," "Experience," and "Contact Me," making it easy to present your information clearly.
+This template provides a fully responsive layout to highlight your projects and skills. Customize the content in the respective sections to personalize your portfolio. The template includes sections for "About Me," "My Projects" and "Contact Me," making it easy to present your information clearly.
 
 Technologies Used:
 - React: For building the user interface.
